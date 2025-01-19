@@ -74,7 +74,7 @@ compinit
 
 source $ZSH/oh-my-zsh.sh
 ##plugins=(z zsh-navigation-tools zsh-interactive-cd git python virtualenv colorize dirhistory history ssh tailscale)
-plugins=(asdf z zsh-syntax-highlighting zsh-autosuggestions zsh-navigation-tools zsh-interactive-cd git python virtualenv colorize dirhistory history ssh tailscale fzf history-substring-search dircycle fzf-tab fzf-zsh-plugin)
+plugins=(z zsh-syntax-highlighting zsh-autosuggestions zsh-navigation-tools zsh-interactive-cd git python virtualenv colorize dirhistory history ssh tailscale fzf history-substring-search dircycle fzf-tab)
 
 
 # User configuration
@@ -121,7 +121,6 @@ HISTSIZE=991000
 SAVEHIST=991000
 HISTFILE=~/.zsh_history
 
-fpath=(${~/.asdf}/completions $fpath)
 # Use modern completion system
 compinit
 
@@ -145,16 +144,20 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 export S3='n2aexG6AtAh9Rqpipr*!D3oYJZ'
 
-bindkey ";5D" backward-word
-bindkey ";5C" forward-word
 
 source /usr/share/zsh-antigen/antigen.zsh
+antigen bundle Aloxaf/fzf-tab
 
-antigen init ~/.antigenrc
+antigen use Aloxaf/fzf-tab
+bindkey ";5C" forward-word
+bindkey ";5D" backward-word
+antigen use zsh-users/zsh-autosuggestions
+antigen use zsh-users/zsh-syntax-highlighting
+antigen use oh-my-zsh
 
+
+antigen apply
 
 # The following lines were added by compinstall
 # End of lines added by compinstall
 export FPATH="/home/pi/eza/completions/zsh:$FPATH"
-alias "lll=eza --long --mounts --recurse --tree --level=2 --icons=automatic --git --all --show-symlinks --color-scale-mode gradient --color-scale size"
-alias cat="batcat"
