@@ -1,0 +1,7 @@
+
+antigen use Aloxaf/fzf-tab
+antigen use zsh-users/zsh-autosuggestions
+antigen use zsh-users/zsh-syntax-highlighting
+antigen use oh-my-zsh
+#rm ~/.zcompdump
+antigen apply
