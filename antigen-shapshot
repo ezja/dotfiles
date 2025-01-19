@@ -1,0 +1,5 @@
+version='1'; created_on='Sun 19 Jan 17:30:25 CET 2025'; checksum='bf45cd3c0b7c710b8467b305a3f6655e';
+6aced3f35def61c5edf9d790e945e8bb4fe7b305 https://github.com/Aloxaf/fzf-tab.git
+d689aa289e5dcda7c35b907af62bd08feb679b37 https://github.com/robbyrussell/oh-my-zsh.git
+0e810e5afa27acbd074398eefbe28d13005dbc15 https://github.com/zsh-users/zsh-autosuggestions.git
+5eb677bb0fa9a3e60f0eff031dc13926e093df92 https://github.com/zsh-users/zsh-syntax-highlighting.git
