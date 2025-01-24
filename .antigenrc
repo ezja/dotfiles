@@ -1,0 +1,9 @@
+antigen use chitoku-k/fzf-zsh-completions
+antigen use zsh-users/zsh-completions
+antigen use Aloxaf/fzf-tab
+antigen use zsh-users/zsh-autosuggestions
+antigen use zsh-users/zsh-syntax-highlighting
+antigen use oh-my-zsh
+antigen apply
+
+#rm ~/.zcompdump
