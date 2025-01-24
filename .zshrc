@@ -40,7 +40,7 @@ source ~/fzf-tab/*plugin.zsh
 source ~/fzf-tab-source/*.plugin.zsh
 
 FZF_PREVIEW_ADVANCED=1
-export FZF_DEFAULT_OPTS="--preview='batcat' --color=always $realpath"
+export FZF_DEFAULT_OPTS="--preview='batcat --color=always $realpath'"
 
 ### ALIASES ###
 alias cat="batcat"
