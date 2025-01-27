@@ -22,7 +22,7 @@ export ZSH_AUTOSUGGEST_STRATEGY=(history completion match_prev_cmd) HISTFILE=~/.
 
 ### OMZ ###
 export ZSH="$HOME/.oh-my-zsh"
-export FPATH="/home/pi/eza/completions/zsh:$FPATH"
+#export FPATH="/home/pi/eza/completions/zsh:$FPATH"
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion match_prev_cmd) 
 ##plugins=(z zsh-navigation-tools zsh-interactive-cd git python virtualenv colorize dirhistory history ssh tailscale)
 # rm ~/.zcompdump
@@ -33,14 +33,15 @@ source /usr/share/zsh-antigen/antigen.zsh
 
 antigen init ~/.antigenrc
 antigen apply
-antigen init ~/.antigenrc
+#antigen init ~/.antigenrc
 
 ### FZF ###
 source ~/fzf-tab/*plugin.zsh
 source ~/fzf-tab-source/*.plugin.zsh
 
 FZF_PREVIEW_ADVANCED=1
-export FZF_DEFAULT_OPTS="--preview='batcat --color=always $realpath'"
+export FZF_DEFAULT_OPTS="--preview='bat --style=numbers --color=always --line-range :500 {}' --preview-window=right:60%  --header-lines=1 --info=inline "
+
 
 ### ALIASES ###
 alias cat="batcat"
@@ -85,3 +86,6 @@ function insert-fzy-path-in-command-line() {
     zle reset-prompt
 }
 zle -N insert-selecta-path-in-command-line
+alias nrf=Downloads/nrfconnect-4.4.0-x86_64.appimage
+alias ppk=Downloads/nrfconnect-4.4.0-x86_64.appimage
+alias ppk=./home/orlo/Downloads/nrfconnect-4.4.0-x86_64.appimage
